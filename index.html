@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Star Wars Animation">
+    <meta name="keywords" content="star, wars, animation>
+    <meta name="author" content="Michael J Peppers <mjpeppersdev@protonmail.com>">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Wars Skywalker Saga</title>
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+</head>
+
+
+<div class="wrapper">
+  <a id="github-link" href="https://github.com/MJPeppersdev" target="_blank"></a>
+  <div id="skywalker">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 861 1000">
+      <defs>
+        <mask id="mask--molten-cracks">
+          <image id="cracks--molten-mask" x="-315" y="-315" width="630" height="630" xlink:href="https://user-images.githubusercontent.com/28616709/79061447-49be0900-7c45-11ea-85a4-ef09515e205e.png" transform="translate(465 340)"/>
+        </mask>
+        
+        <mask id="mask--cracks">
+          <image id="cracks--mask" width="512" height="560" xlink:href="https://user-images.githubusercontent.com/28616709/79061459-58a4bb80-7c45-11ea-817f-fc18f21b3962.gif" transform="translate(208 32)"/>
+        </mask>
+        
+        <mask id="mask--sith-lightsaber-turbulence">
+          <rect width="100%" height="100%" fill="black"/>
+          <image width="124" height="175" xlink:href="https://user-images.githubusercontent.com/28616709/79061469-740fc680-7c45-11ea-8b1d-e81a45a24fc9.jpg" transform="translate(435 763)"/>
+        </mask>
+        
+        <filter id="filter--turbulence" filterUnits="objectBoundingBox" x="0" y="0" width="100%" height="100%">
+          <feTurbulence id="turbulence" type="fractalNoise" numOctaves="4" seed="20"></feTurbulence>
+          <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="5" in="SourceGraphic"></feDisplacementMap>
+        </filter>
+      </defs>
+
+      <image id="dark--no-cracks" width="861" height="1000" xlink:href="https://user-images.githubusercontent.com/28616709/79061478-88ec5a00-7c45-11ea-9784-1ec1432774b9.jpg"/>
+
+      <g mask="url(#mask--molten-cracks)">
+        <g mask="url(#mask--cracks)">
+          <image id="cracks--dark" width="504" height="550" xlink:href="https://user-images.githubusercontent.com/28616709/79061479-90136800-7c45-11ea-8e2d-cbec902315cd.jpg" transform="translate(213 39)"/>
+        </g>
+      </g>
+
+      <g class="bright">
+        <image id="bright--no-cracks" width="861" height="1000" xlink:href="https://user-images.githubusercontent.com/28616709/79061484-9b669380-7c45-11ea-8c27-5eb558e19c9d.jpg"/>
+
+        <g mask="url(#mask--molten-cracks)">
+          <g mask="url(#mask--cracks)">
+            <image id="cracks--bright" width="504" height="550" xlink:href="https://user-images.githubusercontent.com/28616709/79061491-a6212880-7c45-11ea-8c65-3e0c552d86ba.jpg" transform="translate(213 39)"/>
+          </g>
+        </g>
+      </g>
+      
+      <g>
+        <image id="lightsaber-glow--jedi--highlights" width="345" height="277" xlink:href="https://user-images.githubusercontent.com/28616709/79061505-c81aab00-7c45-11ea-9512-88b265778fc0.jpg" transform="translate(245 239)"/>
+
+        <image id="lightsaber-glow--jedi" width="425" height="181" xlink:href="https://user-images.githubusercontent.com/28616709/79061510-d36dd680-7c45-11ea-8a90-437b1adea107.gif" transform="translate(113 126)"/>
+      </g>
+      
+      <g>
+        <image id="lightsaber-glow--sith--highlights" width="154" height="232" xlink:href="https://user-images.githubusercontent.com/28616709/79061515-dcf73e80-7c45-11ea-92a4-af4e5c4214da.jpg" transform="translate(430 731)"/>
+        
+        <image id="lightsaber-glow--sith" width="124" height="175" xlink:href="https://user-images.githubusercontent.com/28616709/79061519-e54f7980-7c45-11ea-9183-76d2fe3c36a2.gif" transform="translate(435 763)"/>
+      </g>
+      
+      <!-- mask & filter combo doesn't work in SVG on single element. Seems to work better with filter in CSS -->
+      <g mask="url(#mask--sith-lightsaber-turbulence)">
+        <image id="lightsaber-glow--sith--turbulence" width="154" height="232" xlink:href="https://user-images.githubusercontent.com/28616709/79061521-f00a0e80-7c45-11ea-9547-ddcf92fbc4f1.jpg" transform="translate(430 731)"/>
+      </g>
+    </svg>
+
+    <div id="lightspeed-mask">
+      <div id="space"></div>
+    </div>
+
+    <div id="embers">
+      <img src="https://user-images.githubusercontent.com/28616709/79064431-b9d88900-7c5d-11ea-814e-28b8d51dde83.gif" width="100%" height="100%" alt="">
+    </div>
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+<script src="app.js"></script>
+
+
+</html>
