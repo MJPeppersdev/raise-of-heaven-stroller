@@ -1,0 +1,338 @@
+body {
+    background-color: black;
+    position: relative;
+    --innerVH: 100vh;
+    height: var(--innerVH);
+  }
+  
+  .wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: grid;
+    place-items: stretch center;
+  }
+  
+  #skywalker {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  svg {
+    display: block;
+    height: 100%;
+  }
+  
+  image {
+    image-rendering: crisp-edges;
+  }
+  
+  #bright--no-cracks,
+  .bright {
+    -webkit-animation: darkside 20s infinite alternate;
+            animation: darkside 20s infinite alternate;
+  }
+  
+  #lightsaber-glow--jedi--highlights,
+  #lightsaber-glow--jedi {
+    -webkit-animation: lightside 20s infinite alternate;
+            animation: lightside 20s infinite alternate;
+  }
+  
+  #lightsaber-glow--jedi--highlights {
+    mix-blend-mode: lighten;
+  }
+  
+  #lightsaber-glow--jedi {
+    mix-blend-mode: screen;
+  }
+  
+  #lightsaber-glow--sith {
+    mix-blend-mode: screen;
+  }
+  
+  #lightsaber-glow--sith--highlights {
+    mix-blend-mode: lighten;
+  }
+  
+  #lightsaber-glow--sith,
+  #lightsaber-glow--sith--highlights {
+    -webkit-animation: darkside 1s infinite alternate;
+            animation: darkside 1s infinite alternate;
+  }
+  
+  #lightsaber-glow--sith--turbulence {
+    -webkit-filter: url(#filter--turbulence);
+            filter: url(#filter--turbulence);
+    mix-blend-mode: lighten;
+  }
+  
+  @-webkit-keyframes lightside {
+    0% {
+      opacity: 0.3;
+    }
+    10% {
+      opacity: 0.6;
+    }
+    20% {
+      opacity: 0.4;
+    }
+    30% {
+      opacity: 1;
+    }
+    40% {
+      opacity: 0.3;
+    }
+    50% {
+      opacity: 0.6;
+    }
+    60% {
+      opacity: 0.4;
+    }
+    70% {
+      opacity: 0.6;
+    }
+    80% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 0.1;
+    }
+    100% {
+      opacity: 0.3;
+    }
+  }
+  
+  @keyframes lightside {
+    0% {
+      opacity: 0.3;
+    }
+    10% {
+      opacity: 0.6;
+    }
+    20% {
+      opacity: 0.4;
+    }
+    30% {
+      opacity: 1;
+    }
+    40% {
+      opacity: 0.3;
+    }
+    50% {
+      opacity: 0.6;
+    }
+    60% {
+      opacity: 0.4;
+    }
+    70% {
+      opacity: 0.6;
+    }
+    80% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 0.1;
+    }
+    100% {
+      opacity: 0.3;
+    }
+  }
+  @-webkit-keyframes darkside {
+    0% {
+      opacity: 0.3;
+    }
+    5% {
+      opacity: 0.8;
+    }
+    15% {
+      opacity: 0.4;
+    }
+    20% {
+      opacity: 1;
+    }
+    25% {
+      opacity: 0.3;
+    }
+    35% {
+      opacity: 0.8;
+    }
+    45% {
+      opacity: 0.2;
+    }
+    50% {
+      opacity: 1;
+    }
+    55% {
+      opacity: 0.3;
+    }
+    60% {
+      opacity: 0.6;
+    }
+    65% {
+      opacity: 0.4;
+    }
+    70% {
+      opacity: 0.2;
+    }
+    80% {
+      opacity: 0.6;
+    }
+    85% {
+      opacity: 0.8;
+    }
+    90% {
+      opacity: 0.4;
+    }
+    95% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 0.3;
+    }
+  }
+  @keyframes darkside {
+    0% {
+      opacity: 0.3;
+    }
+    5% {
+      opacity: 0.8;
+    }
+    15% {
+      opacity: 0.4;
+    }
+    20% {
+      opacity: 1;
+    }
+    25% {
+      opacity: 0.3;
+    }
+    35% {
+      opacity: 0.8;
+    }
+    45% {
+      opacity: 0.2;
+    }
+    50% {
+      opacity: 1;
+    }
+    55% {
+      opacity: 0.3;
+    }
+    60% {
+      opacity: 0.6;
+    }
+    65% {
+      opacity: 0.4;
+    }
+    70% {
+      opacity: 0.2;
+    }
+    80% {
+      opacity: 0.6;
+    }
+    85% {
+      opacity: 0.8;
+    }
+    90% {
+      opacity: 0.4;
+    }
+    95% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 0.3;
+    }
+  }
+  #lightspeed-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-mask-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/106403/rise-of-skywalker--stars--alpha-mask.png);
+            mask-image: url(https://user-images.githubusercontent.com/28616709/79064693-ef7e7180-7c5f-11ea-99c2-84333f442dad.png);
+    -webkit-mask-size: 100% 100%;
+            mask-size: 100% 100%;
+    mix-blend-mode: screen;
+    display: grid;
+  }
+  #lightspeed-mask:after {
+    display: block;
+    content: '';
+    grid-area: 1 / 1;
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(30%, #008aff), to(#e10019));
+    background-image: linear-gradient(to right, #008aff 30%, #e10019);
+    mix-blend-mode: overlay;
+  }
+  
+  #space {
+    background-color: black;
+    grid-area: 1 / 1;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: grid;
+    place-items: center center;
+    --perspective: 100px;
+    -webkit-perspective: var(--perspective);
+            perspective: var(--perspective);
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+  }
+  
+  #space time {
+    grid-area: 1 / 1;
+    -webkit-transform-origin: 50% 0%;
+            transform-origin: 50% 0%;
+    background-color: white;
+    box-shadow: 0 0 .5rem white, 0 0 1rem white, 0 0 1rem white;
+  }
+  @supports (-moz-transition: all) {
+    #space time {
+      box-shadow: 0 0 .5rem white;
+    }
+  }
+  
+  #embers {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    height: 20%;
+    width: 40%;
+    -webkit-mask-image: url(https://user-images.githubusercontent.com/28616709/79061536-0d3edd00-7c46-11ea-8b80-f0e4ddd18e50.png);
+            mask-image: url(https://user-images.githubusercontent.com/28616709/79061536-0d3edd00-7c46-11ea-8b80-f0e4ddd18e50.png);
+    -webkit-mask-size: 100% 100%;
+            mask-size: 100% 100%;
+    mix-blend-mode: screen;
+  }
+  #embers img {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+
+  #github-link {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    height: 40px;
+    width: 40px;
+    z-index: 10;
+    border-radius: 50%;
+    box-sizing: border-box;
+    background-image: url("mjplogo.png");
+    background-position: center center;
+    background-size: cover;
+    opacity: 0.4;
+    transition: all 0.25s;
+}
+
+#github-link:hover {
+    opacity: 0.8;
+    box-shadow: 0 0 6px #efefef;
+}
+  
